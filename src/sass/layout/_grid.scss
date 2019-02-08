@@ -1,0 +1,77 @@
+@function g-context($g-col-width, $g-col-count ,$g-gutter-width) {
+    $g-context: ($g-col-width * $g-col-count) + ($g-gutter-width * ($g-col-count - 1));
+    @return $g-context;
+  }
+  
+/*
+* === Grid ===
+*/
+
+.wrapper{
+  width: 100%;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+
+.container{
+    margin: 0 7%;
+    @include mq(medium){
+      margin: 0 10%;
+    }
+}
+
+.grid__row {
+	@include flex;
+	@include mq(medium){
+    @include flex(row);
+	}
+}
+.grid__col {
+  @include mq(medium) {
+    @include g-columns;
+  }
+
+}
+
+.centered{
+  @include mq(medium){
+  max-width: 100%;
+  margin: 0 auto;
+ }
+}
+.mb-3{
+  margin-bottom: 3em;
+}
+
+.mt-3{
+margin-top: 3em;
+}
+// Adjacent sibling margins
+
+@mixin doubly($margin: 1em) {
+	& + & {
+	  margin-left: $margin;
+    @content;
+	}
+}
+// Column styles
+
+[class^="grid__col--"] {
+  font-weight: $font-medium;
+
+  @include mq(small)  {
+    margin-top: em(12px);
+    margin-bottom: em(12px);
+    width: 100%;
+
+  }
+  @include mq(medium) {
+    // @include doubly(percentage($g-gutter-width / $context));    
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px;
+    @include flex(row, center);
+  
+    }
+  }

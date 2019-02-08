@@ -1,0 +1,34 @@
+.headline--primary {
+    font-size: em(28px);
+    font-weight: $font-medium;
+    color: $col-font-primary;
+    line-height: 1.2;
+    margin: 1em 0;
+    font-family: $font-sans;
+    @include mq(medium){
+        font-size: em(36px);
+        }
+}
+    
+    
+.headline--secondary {
+    font-size: em(18px);
+    font-weight: $font-regular;
+    margin: 0.2em 1em;
+    font-family: $font-sans;
+    color: $col-font-primary;
+    @include mq(medium){
+        font-size: em(20px);
+        margin: 0.2em 2em;
+        }
+    &__error{
+        color: $col-font-error;
+    }
+}
+
+h1,h2,h3,h4,h5,p,li{
+    font-family: $font-sans;
+	line-height: $font-line-height;
+	font-weight: $font-regular;
+	margin: 0;
+}

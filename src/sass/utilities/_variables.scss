@@ -1,0 +1,36 @@
+
+$font-sans: 'Open Sans', Arial, Helvetica, sans-serif; 
+$font-size-default: 16px;
+$font-line-height: 1.8;
+
+/*Font Weights */
+$font-light: 300;
+$font-regular: 400;
+$font-medium: 600;
+$font-bold: 700;
+
+
+/* Font Colours*/
+
+$col-font-dark  : #282828;
+$col-white      : #fff;
+$col-purple     : #703FAB;
+$col-blue       : #3766A7;
+$col-red        : #cc0000;
+$col-slate      : lightslategray;
+
+
+$col-font-primary   : $col-white;
+$col-font-highlight : $col-purple;
+$col-font-error     : $col-red;
+/* Breakpoints*/
+$brkpoint-sm    : 1px;
+$brkpoint-md    : 768px;
+$brkpoint-lg    : 1100px;
+
+
+/* Grid Column Variables*/
+$g-col-width    : 65px;
+$g-gutter-width : 20px;
+$g-col-count    : 12;
+$g-cont-max-w   : 1050px;
